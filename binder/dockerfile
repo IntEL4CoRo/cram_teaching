@@ -1,4 +1,4 @@
-FROM yxzhan/intel4coro:binderhub-0.0.7
+FROM arthurniedz/cram:test
 
 # # Update CRAM
 # WORKDIR /home/${NB_USER}/workspace/ros/src
