@@ -1,0 +1,30 @@
+FROM yxzhan/intel4coro:binderhub-0.0.7
+
+# # Update CRAM
+# WORKDIR /home/${NB_USER}/workspace/ros/src
+# RUN wstool merge https://raw.githubusercontent.com/cram2/cram/devel/cram-20.04-http.rosinstall
+# RUN wstool update
+RUN python3 -m pip install --no-cache-dir notebook jupyterlab
+
+ARG NB_USER=jovyan
+ARG NB_UID=1000
+ENV USER ${NB_USER}
+ENV NB_UID ${NB_UID}
+ENV HOME /home/${NB_USER}
+
+RUN adduser --disabled-password \
+    --gecos "Default user" \
+    --uid ${NB_UID} \
+    ${NB_USER}
+
+USER ${NB_USER}
+
+
+WORKDIR /home/${NB_USER}
+ADD https://api.github.com/repos/yxzhan/cram_teaching/git/refs/heads/main version.json
+RUN git clone -b main https://github.com/yxzhan/cram_teaching.git work
+RUN jupyter lab workspaces import /home/${NB_USER}/work/binder/workspace.json
+
+WORKDIR /home/${NB_USER}/work/
+
+ENTRYPOINT ["/home/jovyan/work/binder/init.sh"]
