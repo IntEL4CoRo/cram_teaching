@@ -20,11 +20,11 @@ RUN adduser --disabled-password \
 USER ${NB_USER}
 
 
-# WORKDIR /home/${NB_USER}
-# ADD https://api.github.com/repos/yxzhan/cram_teaching/git/refs/heads/main version.json
-# RUN git clone -b main https://github.com/yxzhan/cram_teaching.git work
-# RUN jupyter lab workspaces import /home/${NB_USER}/work/binder/workspace.json
+WORKDIR /home/${NB_USER}
+ADD https://api.github.com/repos/yxzhan/cram_teaching/git/refs/heads/main version.json
+RUN git clone -b main https://github.com/yxzhan/cram_teaching.git work
+RUN jupyter lab workspaces import /home/${NB_USER}/work/binder/workspace.json
 
-# WORKDIR /home/${NB_USER}/work/
+WORKDIR /home/${NB_USER}/work/
 
 # ENTRYPOINT ["/home/jovyan/work/binder/init.sh"]
