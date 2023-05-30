@@ -31,5 +31,6 @@ RUN git clone -b main https://github.com/yxzhan/cram_teaching.git work
 # RUN jupyter lab workspaces import /home/${NB_USER}/work/binder/workspace.json
 
 WORKDIR /home/${NB_USER}/work/
+RUN chmod +x ./binder/init.sh
 
 ENTRYPOINT ["/home/jovyan/work/binder/init.sh"]
