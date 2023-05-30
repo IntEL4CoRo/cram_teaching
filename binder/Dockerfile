@@ -2,10 +2,11 @@ FROM arthurniedz/cram:test
 
 USER root
 RUN apt-get update && apt-get install -y curl xvfb
+RUN pip install https://raw.githubusercontent.com/yxzhan/jupyterlab-rviz/master/release/jupyterlab_rviz-0.2.4.tar.gz
 RUN pip install jupyter-server-proxy jupyterlab-git jlab-enhanced-cell-toolbar \
                 cbor2 twisted cryptography==38.0.4 autobahn \
                 pymongo Pillow pycryptodomex gnupg
-RUN pip install https://raw.githubusercontent.com/yxzhan/jupyterlab-rviz/master/release/jupyterlab_rviz-0.2.4.tar.gz
+
 WORKDIR /home/workspace/ros/
 RUN git clone https://github.com/yxzhan/rvizweb.git src/rvizweb -b 0.1.0
 RUN rosdep install -y --ignore-src --from-paths ./ -r
