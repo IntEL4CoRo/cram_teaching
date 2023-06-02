@@ -3,7 +3,7 @@
 source ${HOME}/workspace/ros/devel/setup.bash
 
 roscore &
-# roslaunch --wait rvizweb rvizweb.launch config_name:=cram_projection_demos &
-# roslaunch --wait ${PWD}/binder/reset_pr2.launch msg_file:=${PWD}/binder/reset_pr2.txt &
+roslaunch --wait rvizweb rvizweb.launch &
 
 xvfb-run exec "$@"
+# exec "$@"
