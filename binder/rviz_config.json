@@ -3,8 +3,6 @@
     "background": "#888888",
     "colladaLoader": "collada2",
     "fixedFrame": "/map",
-    "url": "ws://localhost:8888/proxy/9090",
-    "colladaServer": "http://localhost:8888/proxy/8001",
     "videoServer": "http://localhost:8888/proxy/9999"
   },
   "viewerOptions": {
