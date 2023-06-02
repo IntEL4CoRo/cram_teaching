@@ -38,7 +38,7 @@ RUN sed -i '3d' ${HOME}/workspace/ros/src/cram/cram_demos/cram_projection_demos/
 
 # Clone this repository and set it as the working directory
 WORKDIR /home/${NB_USER}
-# ADD https://api.github.com/repos/yxzhan/cram_teaching/git/refs/heads/main version.json
+ADD https://api.github.com/repos/yxzhan/cram_teaching/git/refs/heads/main version.json
 RUN git clone -b main https://github.com/yxzhan/cram_teaching.git repo
 
 # Overwrite the entrypoint, and it has to end with `exec "$@"`. 
