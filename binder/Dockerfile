@@ -1,6 +1,6 @@
 FROM arthurniedz/cram:test
 
-FROM yxzhan/intel4coro:jupyterhub-0.1.7
+FROM yxzhan/intel4coro:jupyterhub-base-0.1
 
 ARG IAI_WS=/home/workspace/ros
 
@@ -8,11 +8,12 @@ USER ${NB_USER}
 # Replace ROS workspace
 COPY --from=0 --chown=${NB_USER}:users /home/workspace /home/workspace
 # === To be deleted after cram branch merged ===
-RUN rm -rf /home/workspace/ros/src/cram/cram_common/cram_tf
-RUN mv ${HOME}/workspace/ros/src/cram/cram_common/cram_tf /home/workspace/ros/src/cram/cram_common/cram_tf
+RUN rm -rf /home/workspace/ros/src/cram/cram_common/cram_tf && \
+    git clone https://github.com/cram2/cram.git -b devel ${HOME}/cram_devel && \
+    mv ${HOME}/cram_devel/cram_common/cram_tf /home/workspace/ros/src/cram/cram_common/cram_tf && \
+    rm -rf ${HOME}/cram_devel
 # ===  END ===
-RUN rm -rf ${HOME}/workspace
-RUN ln -s /home/workspace ${HOME}/workspace
+RUN rm -rf ${HOME}/workspace && ln -s /home/workspace ${HOME}/workspace
 WORKDIR ${IAI_WS}
 # Install Rvizweb and PyKDL from source
 RUN git clone https://github.com/yxzhan/rvizweb.git src/rvizweb -b 0.1.1
