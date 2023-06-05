@@ -41,7 +41,7 @@ RUN /opt/conda/bin/python ${HOME}/work/compress_textures.py --img_path=${IAI_WS}
 # Overwrite the entrypoint, and it has to end with `exec "$@"`.
 # Do not start the juptyerlab server in the entrypoint script, it should be launched by the jupyterhub.
 WORKDIR /home/${NB_USER}
-# ADD https://api.github.com/repos/yxzhan/cram_teaching/git/refs/heads/main version.json
+ADD https://api.github.com/repos/yxzhan/cram_teaching/git/refs/heads/main version.json
 RUN git clone -b main https://github.com/yxzhan/cram_teaching.git repo
 RUN chmod +x ${HOME}/repo/binder/init.sh
 
