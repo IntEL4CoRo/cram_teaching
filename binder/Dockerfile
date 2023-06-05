@@ -34,9 +34,6 @@ RUN xvfb-run /usr/bin/sbcl --dynamic-space-size 4096 --load ${HOME}/work/pre-com
 # Fix 3d Meshes material files missing issue
 RUN cd ${HOME}/workspace/ros/src/cram/cram_demos/cram_projection_demos/resource/household && \
     sed -i '3d' open_box.obj bowl.obj cup.obj
-# Compress texture files
-COPY --chown=${NB_USER}:users ./compress_textures.py ${HOME}/work
-RUN /opt/conda/bin/python ${HOME}/work/compress_textures.py --img_path=${IAI_WS}/src/iai_maps/iai_apartment/meshes/ --max_size=512
 
 # Clone this repository and set it as the working directory
 # Overwrite the entrypoint, and it has to end with `exec "$@"`.
@@ -45,6 +42,9 @@ WORKDIR /home/${NB_USER}
 ADD https://api.github.com/repos/yxzhan/cram_teaching/git/refs/heads/main version.json
 RUN git clone -b main https://github.com/yxzhan/cram_teaching.git repo
 RUN chmod +x ${HOME}/repo/binder/init.sh
+# Compress texture files
+# COPY --chown=${NB_USER}:users ./compress_textures.py ${HOME}/work
+RUN /opt/conda/bin/python ${HOME}/repo/binder/compress_textures.py --img_path=${IAI_WS}/src/iai_maps/iai_apartment/meshes/ --max_size=512
 
 RUN npm cache clean --force && pip cache purge && rm -rf ${HOME}/.cache/bower && mamba clean -ya
 
