@@ -10,23 +10,23 @@
   "viewerOptions": {
     "camera": {
       "position": {
-        "x": 9,
-        "y": 3,
-        "z": 30
+        "x": 21.6,
+        "y": 4.1,
+        "z": 2.3
       }
     },
     "cameraControls": {
       "center": {
-        "x": 9,
-        "y": 3,
-        "z": 0
+        "x": 16,
+        "y": 2.5,
+        "z": 0.5
       }
     },
     "directionalLight": {
       "position": {
-        "x": 9,
-        "y": 3,
-        "z": 5
+        "x": 16,
+        "y": 2.5,
+        "z": 0.5
       }
     }
   },
