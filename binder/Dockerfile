@@ -48,6 +48,7 @@ RUN chmod +x ${HOME}/repo/binder/init.sh
 RUN /opt/conda/bin/python ${HOME}/repo/binder/compress_textures.py --img_path=${IAI_WS}/src/iai_maps/iai_apartment/meshes/ --max_size=512
 
 RUN npm cache clean --force && pip cache purge && rm -rf ${HOME}/.cache/bower && mamba clean -ya
+RUN jupyter lab workspaces import /home/${NB_USER}/repo/binder/workspace.json
 
 WORKDIR ${HOME}/repo/lectures/
 EXPOSE 8888
