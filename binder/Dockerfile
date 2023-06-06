@@ -1,4 +1,4 @@
-FROM arthurniedz/cram:test
+FROM arthurniedz/cram:devel
 
 FROM yxzhan/intel4coro:jupyterhub-base-0.1
 
