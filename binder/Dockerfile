@@ -33,7 +33,7 @@ RUN xvfb-run /usr/bin/sbcl --dynamic-space-size 4096 --load ${HOME}/work/pre-com
 
 # Fix 3d Meshes material files missing issue
 RUN cd ${HOME}/workspace/ros/src/cram/cram_demos/cram_projection_demos/resource/household && \
-    sed -i '3d' open_box.obj bowl.obj cup.obj
+    sed -i '3d' bowl.obj cup.obj
 
 # Clone this repository and set it as the working directory
 # Overwrite the entrypoint, and it has to end with `exec "$@"`.
@@ -48,6 +48,6 @@ RUN /opt/conda/bin/python ${HOME}/repo/binder/compress_textures.py --img_path=${
 
 RUN npm cache clean --force && pip cache purge && rm -rf ${HOME}/.cache/bower && mamba clean -ya
 
-WORKDIR ${HOME}/repo/
+WORKDIR ${HOME}/repo/lectures/
 EXPOSE 8888
 ENTRYPOINT ["/home/jovyan/repo/binder/init.sh"]
