@@ -16,7 +16,7 @@ RUN rm -rf /home/workspace/ros/src/cram/cram_common/cram_tf && \
 RUN rm -rf ${HOME}/workspace && ln -s /home/workspace ${HOME}/workspace
 WORKDIR ${IAI_WS}
 # Install Rvizweb and PyKDL from source
-RUN git clone https://github.com/yxzhan/rvizweb.git src/rvizweb -b 0.1.1
+RUN git clone https://github.com/yxzhan/rvizweb.git src/rvizweb -b 0.1.0
 RUN git clone https://github.com/orocos/orocos_kinematics_dynamics.git src/orocos_kinematics_dynamics -b v1.5.1
 RUN cd src/orocos_kinematics_dynamics && git submodule update --init
 # Rebuild ROS workspace
