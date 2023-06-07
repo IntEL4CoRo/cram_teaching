@@ -21,6 +21,7 @@ RUN git clone https://github.com/orocos/orocos_kinematics_dynamics.git src/oroco
 RUN cd src/orocos_kinematics_dynamics && git submodule update --init
 # Rebuild ROS workspace
 USER root
+RUN apt install ros-noetic-tf2-tools
 RUN apt-get update && rosdep install -y --ignore-src --from-paths ./ -r
 USER ${NB_USER}
 # RUN catkin clean --yes
