@@ -1,29 +1,29 @@
 {
   "globalOptions": {
-    "background": "#888888",
+    "background": "#111111",
     "colladaLoader": "collada2",
     "fixedFrame": "/map"
   },
   "viewerOptions": {
     "camera": {
       "position": {
-        "x": 4,
-        "y": 4,
-        "z": 4
+        "x": -8.8,
+        "y": -3,
+        "z": 5.7
       }
     },
     "cameraControls": {
       "center": {
-        "x": 2,
-        "y": 2,
-        "z": 0.5
+        "x": -1,
+        "y": 1,
+        "z": 0
       }
     },
     "directionalLight": {
       "position": {
-        "x": 2,
-        "y": 2,
-        "z": 3
+        "x": -3,
+        "y": -3,
+        "z": 5
       }
     }
   },
@@ -35,7 +35,7 @@
       "options": {
         "cellSize": "1",
         "color": "#eeeeee",
-        "numCells": "50"
+        "numCells": "20"
       },
       "type": "grid"
     },
@@ -43,8 +43,7 @@
       "isShown": true,
       "name": "Robot model",
       "options": {
-        "param": "robot_description",
-        "tfPrefix": ""
+        "param": "robot_description"
       },
       "type": "urdf"
     },

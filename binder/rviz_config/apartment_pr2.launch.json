@@ -1,22 +1,22 @@
 {
   "globalOptions": {
-    "background": "#ffffff",
+    "background": "#333333",
     "colladaLoader": "collada2",
     "fixedFrame": "/map"
   },
   "viewerOptions": {
     "camera": {
       "position": {
-        "x": 4,
-        "y": 4,
-        "z": 4
+        "x": 12,
+        "y": 2.5,
+        "z": 5.1
       }
     },
     "cameraControls": {
       "center": {
         "x": 2,
-        "y": 2,
-        "z": 0.5
+        "y": 2.5,
+        "z": 0
       }
     },
     "directionalLight": {
