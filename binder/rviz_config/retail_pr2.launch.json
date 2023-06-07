@@ -2,7 +2,7 @@
   "globalOptions": {
     "background": "#222222",
     "colladaLoader": "collada2",
-    "fixedFrame": "/map"
+    "fixedFrame": "/iai_kitchen/room_link"
   },
   "viewerOptions": {
     "camera": {
