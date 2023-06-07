@@ -5,12 +5,12 @@ transforms:
       stamp: 
         secs: 1683912499
         nsecs: 520116091
-      frame_id: "map"
+      frame_id: "iai_kitchen/room_link"
     child_frame_id: "odom_combined"
     transform: 
       translation: 
-        x: 0.0
-        y: 0.0
+        x: 1.0
+        y: 1.0
         z: 0.0
       rotation: 
         x: 0.0
