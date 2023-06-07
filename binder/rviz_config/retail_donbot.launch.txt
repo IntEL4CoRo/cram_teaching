@@ -3,10 +3,10 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "map"
-    child_frame_id: "odom_combined"
+    child_frame_id: "odom"
     transform: 
       translation: 
         x: 0.0
@@ -21,15 +21,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "odom_combined"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "odom"
     child_frame_id: "base_footprint"
     transform: 
       translation: 
         x: 0.0
         y: 0.0
-        z: 3.814697266402156e-09
+        z: 0.0
       rotation: 
         x: 0.0
         y: 0.0
@@ -39,15 +39,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
     child_frame_id: "base_link"
     transform: 
       translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.05099999523162842
+        x: 0.25524999300638834
+        y: 0.225
+        z: 0.16160000165303548
       rotation: 
         x: 0.0
         y: 0.0
@@ -57,51 +57,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "base_bellow_link"
+    child_frame_id: "wheel_front_left"
     transform: 
       translation: 
-        x: -0.2899999936421712
-        y: 0.0
-        z: 0.8510000190734863
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "fl_caster_rotation_link"
-    transform: 
-      translation: 
-        x: 0.22459999720255533
-        y: 0.22459999720255533
-        z: 0.07919999376932779
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "fl_caster_l_wheel_link"
-    transform: 
-      translation: 
-        x: 0.22459999720255533
-        y: 0.27360000610351565
-        z: 0.07919999376932779
+        x: 0.38524999618530276
+        y: 0.31499999364217124
+        z: 0.10160000324249267
       rotation: 
         x: 5.551115123125783e-17
         y: 0.0
@@ -111,15 +75,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "fl_caster_r_wheel_link"
+    child_frame_id: "wheel_back_left"
     transform: 
       translation: 
-        x: 0.22459999720255533
-        y: 0.175600004196167
-        z: 0.07919999376932779
+        x: -0.3927500089009603
+        y: 0.31499999364217124
+        z: 0.10160000324249267
       rotation: 
         x: 5.551115123125783e-17
         y: 0.0
@@ -129,33 +93,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "fr_caster_rotation_link"
+    child_frame_id: "wheel_front_right"
     transform: 
       translation: 
-        x: 0.22459999720255533
-        y: -0.22459999720255533
-        z: 0.07919999376932779
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "fr_caster_l_wheel_link"
-    transform: 
-      translation: 
-        x: 0.22459999720255533
-        y: -0.175600004196167
-        z: 0.07919999376932779
+        x: 0.38524999618530276
+        y: -0.32000001271565753
+        z: 0.10160000324249267
       rotation: 
         x: 5.551115123125783e-17
         y: 0.0
@@ -165,15 +111,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "fr_caster_r_wheel_link"
+    child_frame_id: "wheel_back_right"
     transform: 
       translation: 
-        x: 0.22459999720255533
-        y: -0.27360000610351565
-        z: 0.07919999376932779
+        x: -0.3927500089009603
+        y: -0.32000001271565753
+        z: 0.10160000324249267
       rotation: 
         x: 5.551115123125783e-17
         y: 0.0
@@ -183,15 +129,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "bl_caster_rotation_link"
+    child_frame_id: "plate"
     transform: 
       translation: 
-        x: -0.22459999720255533
-        y: 0.22459999720255533
-        z: 0.07919999376932779
+        x: -0.044749999046325685
+        y: -0.005000000198682149
+        z: 0.6216000239054362
       rotation: 
         x: 0.0
         y: 0.0
@@ -201,51 +147,375 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "bl_caster_l_wheel_link"
+    child_frame_id: "ur5_base_link"
     transform: 
       translation: 
-        x: -0.22459999720255533
-        y: 0.27360000610351565
-        z: 0.07919999376932779
+        x: -0.2697499910990397
+        y: -0.19899999300638835
+        z: 0.6315999984741211
       rotation: 
-        x: 5.551115123125783e-17
+        x: 0.0
         y: 0.0
-        z: 0.0
-        w: 0.9999999828857289
+        z: -2.6718907323636308e-24
+        w: 1.0
   - 
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "bl_caster_r_wheel_link"
+    child_frame_id: "ur5_shoulder_link"
     transform: 
       translation: 
-        x: -0.22459999720255533
-        y: 0.175600004196167
-        z: 0.07919999376932779
+        x: -0.2697499910990397
+        y: -0.19899999300638835
+        z: 0.7207590103149414
       rotation: 
-        x: 5.551115123125783e-17
+        x: 0.0
         y: 0.0
-        z: 0.0
-        w: 0.9999999828857289
+        z: 0.04619865119457251
+        w: 0.9989323019981384
   - 
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "br_caster_rotation_link"
+    child_frame_id: "ur5_upper_arm_link"
     transform: 
       translation: 
-        x: -0.22459999720255533
-        y: -0.22459999720255533
-        z: 0.07919999376932779
+        x: -0.2697499966068836
+        y: -0.19899999038296626
+        z: 0.7207590103225455
+      rotation: 
+        x: -0.49282324232626695
+        y: -0.5070752232568339
+        z: 0.45942378870677214
+        w: -0.5375219181878492
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "ur5_forearm_link"
+    transform: 
+      translation: 
+        x: -0.29678386586188277
+        y: -0.20150588261677255
+        z: 1.144890975963635
+      rotation: 
+        x: -0.2607233319431542
+        y: -0.6572848353534937
+        z: 0.63041471503675
+        w: -0.32027690671384335
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "ur5_wrist_1_link"
+    transform: 
+      translation: 
+        x: -0.028259022325642202
+        y: -0.2862330750297055
+        z: 1.438981882871404
+      rotation: 
+        x: 0.5028838632104421
+        y: -0.49709940054731816
+        z: 0.5413929619086223
+        w: 0.45485564326080746
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "ur5_wrist_2_link"
+    transform: 
+      translation: 
+        x: 0.06567900214079353
+        y: -0.27752554903170357
+        z: 1.4466270998744766
+      rotation: 
+        x: -0.5012086629867554
+        y: 0.45651212334632874
+        z: -0.49546054005622864
+        w: 0.5430518984794617
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "ur5_wrist_3_link"
+    transform: 
+      translation: 
+        x: 0.07230464343281376
+        y: -0.27698096078536955
+        z: 1.3645959842259399
+      rotation: 
+        x: -0.9954898486265782
+        y: -0.08582589038166294
+        z: -0.04042142238730883
+        w: -0.00016133813609964243
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "ur5_ee_link"
+    transform: 
+      translation: 
+        x: 0.0723046445296424
+        y: -0.27698095208864737
+        z: 1.3645960224564377
+      rotation: 
+        x: 0.5609492063522339
+        y: -0.4347018897533417
+        z: -0.5203665494918823
+        w: -0.4749620258808136
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "adapter_iso50_kms40_frame_in"
+    transform: 
+      translation: 
+        x: 0.07230463822682699
+        y: -0.27698094050089517
+        z: 1.3645960489908855
+      rotation: 
+        x: 0.643229603767395
+        y: 0.764605700969696
+        z: 0.028468240052461624
+        w: 0.028696268796920776
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "kms40_frame_in"
+    transform: 
+      translation: 
+        x: 0.07359273433685302
+        y: -0.2768750508626302
+        z: 1.3486483256022135
+      rotation: 
+        x: 0.643229603767395
+        y: 0.764605700969696
+        z: 0.028468240052461624
+        w: 0.028696268796920776
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "adapter_kms40_fwk050_frame_in"
+    transform: 
+      translation: 
+        x: 0.07576639652252197
+        y: -0.27669639587402345
+        z: 1.3217365264892578
+      rotation: 
+        x: 0.643229603767395
+        y: 0.764605700969696
+        z: 0.028468240052461624
+        w: 0.028696268796920776
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "fwk_fwa_050_frame_in"
+    transform: 
+      translation: 
+        x: 0.07657145659128825
+        y: -0.27663021087646483
+        z: 1.3117692311604818
+      rotation: 
+        x: 0.643229603767395
+        y: 0.764605700969696
+        z: 0.028468240052461624
+        w: 0.028696268796920776
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "adapter_fwa050_wsg50_frame_in"
+    transform: 
+      translation: 
+        x: 0.07770658334096273
+        y: -0.27653690973917644
+        z: 1.2977152506510417
+      rotation: 
+        x: 0.643229603767395
+        y: 0.764605700969696
+        z: 0.028468240052461624
+        w: 0.028696268796920776
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "gripper_base_link"
+    transform: 
+      translation: 
+        x: 0.078511643409729
+        y: -0.2764707565307617
+        z: 1.2877479553222657
+      rotation: 
+        x: 0.764605700969696
+        y: -0.6432295441627502
+        z: 0.028696268796920776
+        w: -0.028468240052461624
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "gripper_gripper_left_link"
+    transform: 
+      translation: 
+        x: 0.078511643409729
+        y: -0.2764707565307617
+        z: 1.2877479553222657
+      rotation: 
+        x: 0.764605700969696
+        y: -0.6432295441627502
+        z: 0.028696268796920776
+        w: -0.028468240052461624
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "gripper_finger_left_link"
+    transform: 
+      translation: 
+        x: 0.08036328156789144
+        y: -0.2763185501098633
+        z: 1.2648231506347656
+      rotation: 
+        x: 0.764605700969696
+        y: -0.6432295441627502
+        z: 0.028696268796920776
+        w: -0.028468240052461624
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "gripper_gripper_right_link"
+    transform: 
+      translation: 
+        x: 0.078511643409729
+        y: -0.2764707565307617
+        z: 1.2877479553222657
+      rotation: 
+        x: 0.6432284712791443
+        y: 0.7646065354347229
+        z: 0.02846819907426834
+        w: 0.028696304187178612
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "gripper_finger_right_link"
+    transform: 
+      translation: 
+        x: 0.08036328156789144
+        y: -0.2763185501098633
+        z: 1.2648231506347656
+      rotation: 
+        x: 0.6432284712791443
+        y: 0.7646065354347229
+        z: 0.02846819907426834
+        w: 0.028696304187178612
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "camera_holder_link"
+    transform: 
+      translation: 
+        x: 0.078511643409729
+        y: -0.2764707565307617
+        z: 1.2877479553222657
+      rotation: 
+        x: 0.643229603767395
+        y: 0.764605700969696
+        z: 0.028468240052461624
+        w: 0.028696268796920776
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "wrist_collision"
+    transform: 
+      translation: 
+        x: 0.07536386648813884
+        y: -0.27672948837280276
+        z: 1.3267201741536458
+      rotation: 
+        x: 0.643229603767395
+        y: 0.764605700969696
+        z: 0.028468240052461624
+        w: 0.028696268796920776
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "switches"
+    transform: 
+      translation: 
+        x: -0.4047499974568685
+        y: 0.0
+        z: 0.38659998575846355
       rotation: 
         x: 0.0
         y: 0.0
@@ -255,51 +525,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "br_caster_l_wheel_link"
+    child_frame_id: "charger"
     transform: 
       translation: 
-        x: -0.22459999720255533
-        y: -0.175600004196167
-        z: 0.07919999376932779
-      rotation: 
-        x: 5.551115123125783e-17
+        x: 0.3302500089009603
         y: 0.0
-        z: 0.0
-        w: 0.9999999828857289
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "br_caster_r_wheel_link"
-    transform: 
-      translation: 
-        x: -0.22459999720255533
-        y: -0.27360000610351565
-        z: 0.07919999376932779
-      rotation: 
-        x: 5.551115123125783e-17
-        y: 0.0
-        z: 0.0
-        w: 0.9999999828857289
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "torso_lift_link"
-    transform: 
-      translation: 
-        x: -0.05
-        y: 0.0
-        z: 0.9556749941507976
+        z: 0.3516000111897786
       rotation: 
         x: 0.0
         y: 0.0
@@ -309,15 +543,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "head_pan_link"
+    child_frame_id: "e_stop"
     transform: 
       translation: 
-        x: -0.06706999937693278
-        y: 0.0
-        z: 1.3371250114440918
+        x: 0.2202500025431315
+        y: 0.2234999974568685
+        z: 0.6815999984741211
       rotation: 
         x: 0.0
         y: 0.0
@@ -327,15 +561,33 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "head_tilt_link"
+    child_frame_id: "wlan"
     transform: 
       translation: 
-        x: 0.0009299999723831813
+        x: 0.30525000890096027
         y: 0.0
-        z: 1.3371250114440918
+        z: 0.566599973042806
+      rotation: 
+        x: 0.0
+        y: -0.1563558131456375
+        z: 0.0
+        w: 0.9877008199691772
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "ur5_touchpad"
+    transform: 
+      translation: 
+        x: 0.09525000254313151
+        y: -0.3104999860127767
+        z: 0.5415999730428059
       rotation: 
         x: 0.0
         y: 0.0
@@ -345,622 +597,82 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "head_plate_frame"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "camera_link"
+    child_frame_id: "rs_camera_link"
     transform: 
       translation: 
-        x: 0.024130000670750936
-        y: 0.0
-        z: 1.401625057220459
+        x: -0.018594
+        y: -0.105693
+        z: 0.017161
+      rotation: 
+        x: 0.4384577807815941
+        y: -0.44113218568966467
+        z: 0.5535614010720573
+        w: 0.5538293459757072
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_link"
+    child_frame_id: "laser_reference_front"
+    transform: 
+      translation: 
+        x: 0.1772
+        y: 0.060215
+        z: 0.149929
       rotation: 
         x: 0.0
         y: 0.0
-        z: 0.0
-        w: 1.0
+        z: 0.3826831259154065
+        w: 0.9238796594468422
   - 
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "laser_tilt_mount_link"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_link"
+    child_frame_id: "laser_reference_back"
     transform: 
       translation: 
-        x: 0.048930001258850095
-        y: 0.0
-        z: 1.1826750399271648
+        x: -0.69357
+        y: -0.506
+        z: 0.1575
       rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
+        x: 3.0264590409483682e-15
+        y: -1.4162890615837867e-15
+        z: -0.9238805867638334
+        w: 0.38268088716437737
   - 
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_shoulder_pan_link"
-    transform: 
-      translation: 
-        x: -0.05
-        y: -0.18799999554951985
-        z: 0.9556749941507976
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: -0.7554191946983337
-        w: 0.6552417278289795
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_shoulder_lift_link"
-    transform: 
-      translation: 
-        x: -0.06413164933522543
-        y: -0.2869964599609375
-        z: 0.9556749941507976
-      rotation: 
-        x: -0.096702940762043
-        y: -0.08387898653745651
-        z: -0.7492040395736694
-        w: 0.6498508453369141
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_upper_arm_roll_link"
-    transform: 
-      translation: 
-        x: -0.06413164933522543
-        y: -0.2869964599609375
-        z: 0.9556749941507976
-      rotation: 
-        x: 0.5061287879943848
-        y: -0.438145250082016
-        z: 0.6134909987449646
-        w: -0.4189167618751526
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_upper_arm_link"
-    transform: 
-      translation: 
-        x: -0.06413164933522543
-        y: -0.2869964599609375
-        z: 0.9556749941507976
-      rotation: 
-        x: 0.5061287879943848
-        y: -0.438145250082016
-        z: 0.6134909987449646
-        w: -0.4189167618751526
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_elbow_flex_link"
-    transform: 
-      translation: 
-        x: -0.1188056230545044
-        y: -0.6700040817260742
-        z: 1.0572422625223796
-      rotation: 
-        x: -0.7824606895446777
-        y: -0.1518833190202713
-        z: 0.14245347678661346
-        w: 0.5868508219718933
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_forearm_roll_link"
-    transform: 
-      translation: 
-        x: -0.1188056230545044
-        y: -0.6700040817260742
-        z: 1.0572422625223796
-      rotation: 
-        x: -0.0431467667222023
-        y: 0.013679035007953644
-        z: 0.2077845185995102
-        w: 0.9771268367767334
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_forearm_link"
-    transform: 
-      translation: 
-        x: -0.1188056230545044
-        y: -0.6700040817260742
-        z: 1.0572422625223796
-      rotation: 
-        x: -0.0431467667222023
-        y: 0.013679035007953644
-        z: 0.2077845185995102
-        w: 0.9771268367767334
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_wrist_flex_link"
-    transform: 
-      translation: 
-        x: 0.17435626983642577
-        y: -0.5400365829467774
-        z: 1.0429054857889812
-      rotation: 
-        x: -0.03486309200525284
-        y: -0.02512652426958084
-        z: 0.20933373272418976
-        w: 0.9768995046615601
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_wrist_roll_link"
-    transform: 
-      translation: 
-        x: 0.17435626983642577
-        y: -0.5400365829467774
-        z: 1.0429054857889812
-      rotation: 
-        x: -0.009912938810884953
-        y: -0.019774358719587326
-        z: 0.20990696549415588
-        w: 0.977471113204956
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_gripper_palm_link"
-    transform: 
-      translation: 
-        x: 0.17435626983642577
-        y: -0.5400365829467774
-        z: 1.0429054857889812
-      rotation: 
-        x: -0.009912938810884953
-        y: -0.019774358719587326
-        z: 0.20990696549415588
-        w: 0.977471113204956
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_gripper_motor_accelerometer_link"
-    transform: 
-      translation: 
-        x: 0.17435626983642577
-        y: -0.5400365829467774
-        z: 1.0429054857889812
-      rotation: 
-        x: -0.009912938810884953
-        y: -0.019774358719587326
-        z: 0.20990696549415588
-        w: 0.977471113204956
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_gripper_l_finger_link"
-    transform: 
-      translation: 
-        x: 0.24032904307047526
-        y: -0.4993291219075521
-        z: 1.0452817878723144
-      rotation: 
-        x: -0.009912938810884953
-        y: -0.019774358719587326
-        z: 0.20990696549415588
-        w: 0.977471113204956
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_gripper_l_finger_tip_link"
-    transform: 
-      translation: 
-        x: 0.3215465545654297
-        y: -0.4572862307230631
-        z: 1.0482966702779135
-      rotation: 
-        x: -0.009912938810884953
-        y: -0.019774358719587326
-        z: 0.20990696549415588
-        w: 0.977471113204956
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_gripper_r_finger_link"
-    transform: 
-      translation: 
-        x: 0.24852832158406576
-        y: -0.517562739054362
-        z: 1.0458354276021322
-      rotation: 
-        x: -0.009912938810884892
-        y: -0.019774358719587312
-        z: 0.20990696549415588
-        w: 0.977471113204956
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_gripper_r_finger_tip_link"
-    transform: 
-      translation: 
-        x: 0.3338044802347819
-        y: -0.4845455169677734
-        z: 1.0491243324279786
-      rotation: 
-        x: -0.009912938810884892
-        y: -0.019774358719587312
-        z: 0.20990696549415588
-        w: 0.977471113204956
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_shoulder_pan_link"
-    transform: 
-      translation: 
-        x: -0.05
-        y: 0.18799999554951985
-        z: 0.9556749941507976
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.8319684267044067
-        w: 0.554823100566864
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_shoulder_lift_link"
-    transform: 
-      translation: 
-        x: -0.08843425909678142
-        y: 0.2803190549214681
-        z: 0.9556749941507976
-      rotation: 
-        x: 0.10991279035806656
-        y: -0.07329864799976349
-        z: 0.8246760368347168
-        w: 0.5499599575996399
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_upper_arm_roll_link"
-    transform: 
-      translation: 
-        x: -0.08843425909678142
-        y: 0.2803190549214681
-        z: 0.9556749941507976
-      rotation: 
-        x: 0.435505211353302
-        y: 0.46968886256217957
-        z: 0.6818032264709473
-        w: 0.35337239503860474
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_upper_arm_link"
-    transform: 
-      translation: 
-        x: -0.08843425909678142
-        y: 0.2803190549214681
-        z: 0.9556749941507976
-      rotation: 
-        x: 0.435505211353302
-        y: 0.46968886256217957
-        z: 0.6818032264709473
-        w: 0.35337239503860474
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_elbow_flex_link"
-    transform: 
-      translation: 
-        x: -0.2368047873179118
-        y: 0.636704953511556
-        z: 1.060438025156657
-      rotation: 
-        x: 0.8076232671737671
-        y: -0.07936400175094604
-        z: -0.04759285971522331
-        w: 0.5823925137519836
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_forearm_roll_link"
-    transform: 
-      translation: 
-        x: -0.2368047873179118
-        y: 0.636704953511556
-        z: 1.060438025156657
-      rotation: 
-        x: 0.019404441118240356
-        y: -0.009612951427698135
-        z: -0.09203975647687912
-        w: 0.9955198168754578
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_forearm_link"
-    transform: 
-      translation: 
-        x: -0.2368047873179118
-        y: 0.636704953511556
-        z: 1.060438025156657
-      rotation: 
-        x: 0.019404441118240356
-        y: -0.009612951427698135
-        z: -0.09203975647687912
-        w: 0.9955198168754578
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_wrist_flex_link"
-    transform: 
-      translation: 
-        x: 0.07869729200998941
-        y: 0.577760378519694
-        z: 1.0654352785746257
-      rotation: 
-        x: 0.016009271144866943
-        y: -0.04618750512599945
-        z: -0.09269062429666519
-        w: 0.9944942593574524
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_wrist_roll_link"
-    transform: 
-      translation: 
-        x: 0.07869729200998941
-        y: 0.577760378519694
-        z: 1.0654352785746257
-      rotation: 
-        x: 0.016009271144866943
-        y: -0.04618750512599945
-        z: -0.09269062429666519
-        w: 0.9944942593574524
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_gripper_palm_link"
-    transform: 
-      translation: 
-        x: 0.07869729200998941
-        y: 0.577760378519694
-        z: 1.0654352785746257
-      rotation: 
-        x: 0.016009271144866943
-        y: -0.04618750512599945
-        z: -0.09269062429666519
-        w: 0.9944942593574524
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_gripper_motor_accelerometer_link"
-    transform: 
-      translation: 
-        x: 0.07869729200998941
-        y: 0.577760378519694
-        z: 1.0654352785746257
-      rotation: 
-        x: 0.016009271144866943
-        y: -0.04618750512599945
-        z: -0.09269062429666519
-        w: 0.9944942593574524
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_gripper_l_finger_link"
-    transform: 
-      translation: 
-        x: 0.15578641891479492
-        y: 0.5732905069986979
-        z: 1.0726764640808106
-      rotation: 
-        x: 0.016009271144866943
-        y: -0.04618750512599945
-        z: -0.09269062429666519
-        w: 0.9944942593574524
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_gripper_l_finger_tip_link"
-    transform: 
-      translation: 
-        x: 0.24610182444254558
-        y: 0.5611728032430013
-        z: 1.0809991162618002
-      rotation: 
-        x: 0.016009271144866943
-        y: -0.04618750512599945
-        z: -0.09269062429666519
-        w: 0.9944942593574524
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_gripper_r_finger_link"
-    transform: 
-      translation: 
-        x: 0.1521287759145101
-        y: 0.5536444346110027
-        z: 1.0718683840433756
-      rotation: 
-        x: 0.016009271144867006
-        y: -0.04618750512599946
-        z: -0.09269062429666519
-        w: 0.9944942593574524
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_gripper_r_finger_tip_link"
-    transform: 
-      translation: 
-        x: 0.24063366254170734
-        y: 0.5318018913269043
-        z: 1.0797911287943522
-      rotation: 
-        x: 0.016009271144867006
-        y: -0.04618750512599946
-        z: -0.09269062429666519
-        w: 0.9944942593574524
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "r_forearm_cam_frame"
-    child_frame_id: "r_forearm_cam_optical_frame"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "ur5_base_link"
+    child_frame_id: "ur5_base"
     transform: 
       translation: 
         x: 0.0
         y: 0.0
         z: 0.0
       rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "l_forearm_cam_frame"
-    child_frame_id: "l_forearm_cam_optical_frame"
-    transform: 
-      translation: 
         x: 0.0
         y: 0.0
-        z: 0.0
-      rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
+        z: -1.0
+        w: 6.123233995736766e-17
   - 
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "l_gripper_motor_slider_link"
-    child_frame_id: "l_gripper_motor_screw_link"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "ur5_wrist_3_link"
+    child_frame_id: "ur5_tool0"
     transform: 
       translation: 
         x: 0.0
@@ -975,10 +687,10 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "r_gripper_motor_slider_link"
-    child_frame_id: "r_gripper_motor_screw_link"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "ur5_ee_link"
+    child_frame_id: "kms_mounting_plate"
     transform: 
       translation: 
         x: 0.0
@@ -986,58 +698,22 @@ transforms:
         z: 0.0
       rotation: 
         x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "projector_wg6802418_frame"
-    child_frame_id: "projector_wg6802418_child_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: 0.0
-        y: -0.7071067811865475
+        y: 0.7071067811865475
         z: 0.0
         w: 0.7071067811865476
   - 
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "narrow_stereo_r_stereo_camera_frame"
-    child_frame_id: "narrow_stereo_r_stereo_camera_optical_frame"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "adapter_iso50_kms40_frame_in"
+    child_frame_id: "adapter_iso50_kms40_frame_out"
     transform: 
       translation: 
         x: 0.0
         y: 0.0
-        z: 0.0
-      rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "narrow_stereo_l_stereo_camera_frame"
-    child_frame_id: "narrow_stereo_r_stereo_camera_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: -0.09
-        z: 0.0
+        z: 0.016
       rotation: 
         x: 0.0
         y: 0.0
@@ -1047,33 +723,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "narrow_stereo_l_stereo_camera_frame"
-    child_frame_id: "narrow_stereo_l_stereo_camera_optical_frame"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "kms40_frame_in"
+    child_frame_id: "kms40_frame_out"
     transform: 
       translation: 
         x: 0.0
         y: 0.0
-        z: 0.0
-      rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "narrow_stereo_link"
-    child_frame_id: "narrow_stereo_l_stereo_camera_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
+        z: 0.027
       rotation: 
         x: 0.0
         y: 0.0
@@ -1083,33 +741,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "narrow_stereo_link"
-    child_frame_id: "narrow_stereo_optical_frame"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "adapter_kms40_fwk050_frame_in"
+    child_frame_id: "adapter_kms40_fwk050_frame_out"
     transform: 
       translation: 
         x: 0.0
         y: 0.0
-        z: 0.0
-      rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "double_stereo_link"
-    child_frame_id: "narrow_stereo_link"
-    transform: 
-      translation: 
-        x: 0.045
-        y: 0.06
-        z: 0.0501
+        z: 0.01
       rotation: 
         x: 0.0
         y: 0.0
@@ -1119,33 +759,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "wide_stereo_r_stereo_camera_frame"
-    child_frame_id: "wide_stereo_r_stereo_camera_optical_frame"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "fwk_fwa_050_frame_in"
+    child_frame_id: "fwk_fwa_050_frame_out"
     transform: 
       translation: 
         x: 0.0
         y: 0.0
-        z: 0.0
-      rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "wide_stereo_l_stereo_camera_frame"
-    child_frame_id: "wide_stereo_r_stereo_camera_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: -0.09
-        z: 0.0
+        z: 0.0141
       rotation: 
         x: 0.0
         y: 0.0
@@ -1155,33 +777,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "wide_stereo_l_stereo_camera_frame"
-    child_frame_id: "wide_stereo_l_stereo_camera_optical_frame"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "adapter_fwa050_wsg50_frame_in"
+    child_frame_id: "adapter_fwa050_wsg50_frame_out"
     transform: 
       translation: 
         x: 0.0
         y: 0.0
-        z: 0.0
-      rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "wide_stereo_link"
-    child_frame_id: "wide_stereo_l_stereo_camera_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
+        z: 0.01
       rotation: 
         x: 0.0
         y: 0.0
@@ -1191,33 +795,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "wide_stereo_link"
-    child_frame_id: "wide_stereo_optical_frame"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "gripper_base_link"
+    child_frame_id: "gripper_tool_frame"
     transform: 
       translation: 
         x: 0.0
         y: 0.0
-        z: 0.0
-      rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "double_stereo_link"
-    child_frame_id: "wide_stereo_link"
-    transform: 
-      translation: 
-        x: 0.045
-        y: 0.03
-        z: 0.0501
+        z: 0.144
       rotation: 
         x: 0.0
         y: 0.0
@@ -1227,390 +813,30 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "sensor_mount_link"
-    child_frame_id: "double_stereo_link"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "gripper_base_link"
+    child_frame_id: "camera_link"
     transform: 
       translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
+        x: 0.0013289
+        y: -0.06619
+        z: 0.031583
       rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "high_def_frame"
-    child_frame_id: "high_def_optical_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "sensor_mount_link"
-    child_frame_id: "high_def_frame"
-    transform: 
-      translation: 
-        x: 0.046457
-        y: -0.11
-        z: 0.0546
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_link"
-    child_frame_id: "base_laser_link"
-    transform: 
-      translation: 
-        x: 0.275
-        y: 0.0
-        z: 0.252
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "torso_lift_link"
-    child_frame_id: "l_torso_lift_side_plate_link"
-    transform: 
-      translation: 
-        x: 0.0535
-        y: 0.209285
-        z: 0.176625
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "torso_lift_link"
-    child_frame_id: "r_torso_lift_side_plate_link"
-    transform: 
-      translation: 
-        x: 0.0535
-        y: -0.209285
-        z: 0.176625
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_link"
-    child_frame_id: "torso_lift_motor_screw_link"
-    transform: 
-      translation: 
-        x: -0.15
-        y: 0.0
-        z: 0.7
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "torso_lift_link"
-    child_frame_id: "imu_link"
-    transform: 
-      translation: 
-        x: -0.02977
-        y: -0.1497
-        z: 0.164
-      rotation: 
-        x: 0.0
-        y: 1.0
-        z: 0.0
-        w: 6.123233995736766e-17
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "head_plate_frame"
-    child_frame_id: "sensor_mount_link"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "head_plate_frame"
-    child_frame_id: "projector_wg6802418_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.11
-        z: 0.0546
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "laser_tilt_mount_link"
-    child_frame_id: "laser_tilt_link"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.03
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "r_gripper_palm_link"
-    child_frame_id: "r_gripper_led_frame"
-    transform: 
-      translation: 
-        x: 0.0513
-        y: 0.0
-        z: 0.0244
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "r_gripper_palm_link"
-    child_frame_id: "r_gripper_tool_frame"
-    transform: 
-      translation: 
-        x: 0.18
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "r_gripper_palm_link"
-    child_frame_id: "r_gripper_motor_slider_link"
-    transform: 
-      translation: 
-        x: 0.16828
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "r_gripper_r_finger_tip_link"
-    child_frame_id: "r_gripper_l_finger_tip_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "l_gripper_palm_link"
-    child_frame_id: "l_gripper_led_frame"
-    transform: 
-      translation: 
-        x: 0.0513
-        y: 0.0
-        z: 0.0244
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "l_gripper_palm_link"
-    child_frame_id: "l_gripper_tool_frame"
-    transform: 
-      translation: 
-        x: 0.18
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "l_gripper_palm_link"
-    child_frame_id: "l_gripper_motor_slider_link"
-    transform: 
-      translation: 
-        x: 0.16828
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "l_gripper_r_finger_tip_link"
-    child_frame_id: "l_gripper_l_finger_tip_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "l_forearm_roll_link"
-    child_frame_id: "l_forearm_cam_frame"
-    transform: 
-      translation: 
-        x: 0.135
-        y: 0.0
-        z: 0.044
-      rotation: 
-        x: -0.6792878295877185
-        y: -0.1963874857876812
-        z: -0.19638748578768117
-        w: 0.6792878295877185
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "r_forearm_roll_link"
-    child_frame_id: "r_forearm_cam_frame"
-    transform: 
-      translation: 
-        x: 0.135
-        y: 0.0
-        z: 0.044
-      rotation: 
-        x: 0.6792878295877185
-        y: -0.1963874857876812
-        z: 0.19638748578768117
-        w: 0.6792878295877185
+        x: -0.0013328210488418551
+        y: -0.11535978141411592
+        z: -0.9933161528195238
+        w: 0.00365581289996265
 ---
 transforms: 
   - 
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "map"
-    child_frame_id: "odom_combined"
+    child_frame_id: "odom"
     transform: 
       translation: 
         x: 0.0
@@ -1625,15 +851,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "odom_combined"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "odom"
     child_frame_id: "base_footprint"
     transform: 
       translation: 
         x: 0.0
         y: 0.0
-        z: 3.814697266402156e-09
+        z: 0.0
       rotation: 
         x: 0.0
         y: 0.0
@@ -1643,15 +869,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
     child_frame_id: "base_link"
     transform: 
       translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.05099999523162842
+        x: 0.25524999300638834
+        y: 0.225
+        z: 0.16160000165303548
       rotation: 
         x: 0.0
         y: 0.0
@@ -1661,51 +887,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "base_bellow_link"
+    child_frame_id: "wheel_front_left"
     transform: 
       translation: 
-        x: -0.2899999936421712
-        y: 0.0
-        z: 0.8510000190734863
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "fl_caster_rotation_link"
-    transform: 
-      translation: 
-        x: 0.22459999720255533
-        y: 0.22459999720255533
-        z: 0.07919999376932779
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "fl_caster_l_wheel_link"
-    transform: 
-      translation: 
-        x: 0.22459999720255533
-        y: 0.27360000610351565
-        z: 0.07919999376932779
+        x: 0.38524999618530276
+        y: 0.31499999364217124
+        z: 0.10160000324249267
       rotation: 
         x: 5.551115123125783e-17
         y: 0.0
@@ -1715,15 +905,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "fl_caster_r_wheel_link"
+    child_frame_id: "wheel_back_left"
     transform: 
       translation: 
-        x: 0.22459999720255533
-        y: 0.175600004196167
-        z: 0.07919999376932779
+        x: -0.3927500089009603
+        y: 0.31499999364217124
+        z: 0.10160000324249267
       rotation: 
         x: 5.551115123125783e-17
         y: 0.0
@@ -1733,33 +923,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "fr_caster_rotation_link"
+    child_frame_id: "wheel_front_right"
     transform: 
       translation: 
-        x: 0.22459999720255533
-        y: -0.22459999720255533
-        z: 0.07919999376932779
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "fr_caster_l_wheel_link"
-    transform: 
-      translation: 
-        x: 0.22459999720255533
-        y: -0.175600004196167
-        z: 0.07919999376932779
+        x: 0.38524999618530276
+        y: -0.32000001271565753
+        z: 0.10160000324249267
       rotation: 
         x: 5.551115123125783e-17
         y: 0.0
@@ -1769,15 +941,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "fr_caster_r_wheel_link"
+    child_frame_id: "wheel_back_right"
     transform: 
       translation: 
-        x: 0.22459999720255533
-        y: -0.27360000610351565
-        z: 0.07919999376932779
+        x: -0.3927500089009603
+        y: -0.32000001271565753
+        z: 0.10160000324249267
       rotation: 
         x: 5.551115123125783e-17
         y: 0.0
@@ -1787,15 +959,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "bl_caster_rotation_link"
+    child_frame_id: "plate"
     transform: 
       translation: 
-        x: -0.22459999720255533
-        y: 0.22459999720255533
-        z: 0.07919999376932779
+        x: -0.044749999046325685
+        y: -0.005000000198682149
+        z: 0.6216000239054362
       rotation: 
         x: 0.0
         y: 0.0
@@ -1805,51 +977,375 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "bl_caster_l_wheel_link"
+    child_frame_id: "ur5_base_link"
     transform: 
       translation: 
-        x: -0.22459999720255533
-        y: 0.27360000610351565
-        z: 0.07919999376932779
+        x: -0.2697499910990397
+        y: -0.19899999300638835
+        z: 0.6315999984741211
       rotation: 
-        x: 5.551115123125783e-17
+        x: 0.0
         y: 0.0
-        z: 0.0
-        w: 0.9999999828857289
+        z: -2.6718907323636308e-24
+        w: 1.0
   - 
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "bl_caster_r_wheel_link"
+    child_frame_id: "ur5_shoulder_link"
     transform: 
       translation: 
-        x: -0.22459999720255533
-        y: 0.175600004196167
-        z: 0.07919999376932779
+        x: -0.2697499910990397
+        y: -0.19899999300638835
+        z: 0.7207590103149414
       rotation: 
-        x: 5.551115123125783e-17
+        x: 0.0
         y: 0.0
-        z: 0.0
-        w: 0.9999999828857289
+        z: 0.04619865119457251
+        w: 0.9989323019981384
   - 
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "br_caster_rotation_link"
+    child_frame_id: "ur5_upper_arm_link"
     transform: 
       translation: 
-        x: -0.22459999720255533
-        y: -0.22459999720255533
-        z: 0.07919999376932779
+        x: -0.2697499966068836
+        y: -0.19899999038296626
+        z: 0.7207590103225455
+      rotation: 
+        x: -0.49282324232626695
+        y: -0.5070752232568339
+        z: 0.45942378870677214
+        w: -0.5375219181878492
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "ur5_forearm_link"
+    transform: 
+      translation: 
+        x: -0.29678386586188277
+        y: -0.20150588261677255
+        z: 1.144890975963635
+      rotation: 
+        x: -0.2607233319431542
+        y: -0.6572848353534937
+        z: 0.63041471503675
+        w: -0.32027690671384335
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "ur5_wrist_1_link"
+    transform: 
+      translation: 
+        x: -0.028259022325642202
+        y: -0.2862330750297055
+        z: 1.438981882871404
+      rotation: 
+        x: 0.5028838632104421
+        y: -0.49709940054731816
+        z: 0.5413929619086223
+        w: 0.45485564326080746
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "ur5_wrist_2_link"
+    transform: 
+      translation: 
+        x: 0.06567900214079353
+        y: -0.27752554903170357
+        z: 1.4466270998744766
+      rotation: 
+        x: -0.5012086629867554
+        y: 0.45651212334632874
+        z: -0.49546054005622864
+        w: 0.5430518984794617
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "ur5_wrist_3_link"
+    transform: 
+      translation: 
+        x: 0.07230464343281376
+        y: -0.27698096078536955
+        z: 1.3645959842259399
+      rotation: 
+        x: -0.9954898486265782
+        y: -0.08582589038166294
+        z: -0.04042142238730883
+        w: -0.00016133813609964243
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "ur5_ee_link"
+    transform: 
+      translation: 
+        x: 0.0723046445296424
+        y: -0.27698095208864737
+        z: 1.3645960224564377
+      rotation: 
+        x: 0.5609492063522339
+        y: -0.4347018897533417
+        z: -0.5203665494918823
+        w: -0.4749620258808136
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "adapter_iso50_kms40_frame_in"
+    transform: 
+      translation: 
+        x: 0.07230463822682699
+        y: -0.27698094050089517
+        z: 1.3645960489908855
+      rotation: 
+        x: 0.643229603767395
+        y: 0.764605700969696
+        z: 0.028468240052461624
+        w: 0.028696268796920776
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "kms40_frame_in"
+    transform: 
+      translation: 
+        x: 0.07359273433685302
+        y: -0.2768750508626302
+        z: 1.3486483256022135
+      rotation: 
+        x: 0.643229603767395
+        y: 0.764605700969696
+        z: 0.028468240052461624
+        w: 0.028696268796920776
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "adapter_kms40_fwk050_frame_in"
+    transform: 
+      translation: 
+        x: 0.07576639652252197
+        y: -0.27669639587402345
+        z: 1.3217365264892578
+      rotation: 
+        x: 0.643229603767395
+        y: 0.764605700969696
+        z: 0.028468240052461624
+        w: 0.028696268796920776
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "fwk_fwa_050_frame_in"
+    transform: 
+      translation: 
+        x: 0.07657145659128825
+        y: -0.27663021087646483
+        z: 1.3117692311604818
+      rotation: 
+        x: 0.643229603767395
+        y: 0.764605700969696
+        z: 0.028468240052461624
+        w: 0.028696268796920776
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "adapter_fwa050_wsg50_frame_in"
+    transform: 
+      translation: 
+        x: 0.07770658334096273
+        y: -0.27653690973917644
+        z: 1.2977152506510417
+      rotation: 
+        x: 0.643229603767395
+        y: 0.764605700969696
+        z: 0.028468240052461624
+        w: 0.028696268796920776
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "gripper_base_link"
+    transform: 
+      translation: 
+        x: 0.078511643409729
+        y: -0.2764707565307617
+        z: 1.2877479553222657
+      rotation: 
+        x: 0.764605700969696
+        y: -0.6432295441627502
+        z: 0.028696268796920776
+        w: -0.028468240052461624
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "gripper_gripper_left_link"
+    transform: 
+      translation: 
+        x: 0.078511643409729
+        y: -0.2764707565307617
+        z: 1.2877479553222657
+      rotation: 
+        x: 0.764605700969696
+        y: -0.6432295441627502
+        z: 0.028696268796920776
+        w: -0.028468240052461624
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "gripper_finger_left_link"
+    transform: 
+      translation: 
+        x: 0.08036328156789144
+        y: -0.2763185501098633
+        z: 1.2648231506347656
+      rotation: 
+        x: 0.764605700969696
+        y: -0.6432295441627502
+        z: 0.028696268796920776
+        w: -0.028468240052461624
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "gripper_gripper_right_link"
+    transform: 
+      translation: 
+        x: 0.078511643409729
+        y: -0.2764707565307617
+        z: 1.2877479553222657
+      rotation: 
+        x: 0.6432284712791443
+        y: 0.7646065354347229
+        z: 0.02846819907426834
+        w: 0.028696304187178612
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "gripper_finger_right_link"
+    transform: 
+      translation: 
+        x: 0.08036328156789144
+        y: -0.2763185501098633
+        z: 1.2648231506347656
+      rotation: 
+        x: 0.6432284712791443
+        y: 0.7646065354347229
+        z: 0.02846819907426834
+        w: 0.028696304187178612
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "camera_holder_link"
+    transform: 
+      translation: 
+        x: 0.078511643409729
+        y: -0.2764707565307617
+        z: 1.2877479553222657
+      rotation: 
+        x: 0.643229603767395
+        y: 0.764605700969696
+        z: 0.028468240052461624
+        w: 0.028696268796920776
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "wrist_collision"
+    transform: 
+      translation: 
+        x: 0.07536386648813884
+        y: -0.27672948837280276
+        z: 1.3267201741536458
+      rotation: 
+        x: 0.643229603767395
+        y: 0.764605700969696
+        z: 0.028468240052461624
+        w: 0.028696268796920776
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "switches"
+    transform: 
+      translation: 
+        x: -0.4047499974568685
+        y: 0.0
+        z: 0.38659998575846355
       rotation: 
         x: 0.0
         y: 0.0
@@ -1859,51 +1355,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "br_caster_l_wheel_link"
+    child_frame_id: "charger"
     transform: 
       translation: 
-        x: -0.22459999720255533
-        y: -0.175600004196167
-        z: 0.07919999376932779
-      rotation: 
-        x: 5.551115123125783e-17
+        x: 0.3302500089009603
         y: 0.0
-        z: 0.0
-        w: 0.9999999828857289
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "br_caster_r_wheel_link"
-    transform: 
-      translation: 
-        x: -0.22459999720255533
-        y: -0.27360000610351565
-        z: 0.07919999376932779
-      rotation: 
-        x: 5.551115123125783e-17
-        y: 0.0
-        z: 0.0
-        w: 0.9999999828857289
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "torso_lift_link"
-    transform: 
-      translation: 
-        x: -0.05
-        y: 0.0
-        z: 0.9556749941507976
+        z: 0.3516000111897786
       rotation: 
         x: 0.0
         y: 0.0
@@ -1913,15 +1373,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "head_pan_link"
+    child_frame_id: "e_stop"
     transform: 
       translation: 
-        x: -0.06706999937693278
-        y: 0.0
-        z: 1.3371250114440918
+        x: 0.2202500025431315
+        y: 0.2234999974568685
+        z: 0.6815999984741211
       rotation: 
         x: 0.0
         y: 0.0
@@ -1931,15 +1391,33 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
+        secs: 1686172999
+        nsecs: 947657108
       frame_id: "base_footprint"
-    child_frame_id: "head_tilt_link"
+    child_frame_id: "wlan"
     transform: 
       translation: 
-        x: 0.0009299999723831813
+        x: 0.30525000890096027
         y: 0.0
-        z: 1.3371250114440918
+        z: 0.566599973042806
+      rotation: 
+        x: 0.0
+        y: -0.1563558131456375
+        z: 0.0
+        w: 0.9877008199691772
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_footprint"
+    child_frame_id: "ur5_touchpad"
+    transform: 
+      translation: 
+        x: 0.09525000254313151
+        y: -0.3104999860127767
+        z: 0.5415999730428059
       rotation: 
         x: 0.0
         y: 0.0
@@ -1949,622 +1427,82 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "head_plate_frame"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "camera_link"
+    child_frame_id: "rs_camera_link"
     transform: 
       translation: 
-        x: 0.024130000670750936
-        y: 0.0
-        z: 1.401625057220459
+        x: -0.018594
+        y: -0.105693
+        z: 0.017161
+      rotation: 
+        x: 0.4384577807815941
+        y: -0.44113218568966467
+        z: 0.5535614010720573
+        w: 0.5538293459757072
+  - 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_link"
+    child_frame_id: "laser_reference_front"
+    transform: 
+      translation: 
+        x: 0.1772
+        y: 0.060215
+        z: 0.149929
       rotation: 
         x: 0.0
         y: 0.0
-        z: 0.0
-        w: 1.0
+        z: 0.3826831259154065
+        w: 0.9238796594468422
   - 
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "laser_tilt_mount_link"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "base_link"
+    child_frame_id: "laser_reference_back"
     transform: 
       translation: 
-        x: 0.048930001258850095
-        y: 0.0
-        z: 1.1826750399271648
+        x: -0.69357
+        y: -0.506
+        z: 0.1575
       rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
+        x: 3.0264590409483682e-15
+        y: -1.4162890615837867e-15
+        z: -0.9238805867638334
+        w: 0.38268088716437737
   - 
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_shoulder_pan_link"
-    transform: 
-      translation: 
-        x: -0.05
-        y: -0.18799999554951985
-        z: 0.9556749941507976
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: -0.7554191946983337
-        w: 0.6552417278289795
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_shoulder_lift_link"
-    transform: 
-      translation: 
-        x: -0.06413164933522543
-        y: -0.2869964599609375
-        z: 0.9556749941507976
-      rotation: 
-        x: -0.096702940762043
-        y: -0.08387898653745651
-        z: -0.7492040395736694
-        w: 0.6498508453369141
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_upper_arm_roll_link"
-    transform: 
-      translation: 
-        x: -0.06413164933522543
-        y: -0.2869964599609375
-        z: 0.9556749941507976
-      rotation: 
-        x: 0.5061287879943848
-        y: -0.438145250082016
-        z: 0.6134909987449646
-        w: -0.4189167618751526
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_upper_arm_link"
-    transform: 
-      translation: 
-        x: -0.06413164933522543
-        y: -0.2869964599609375
-        z: 0.9556749941507976
-      rotation: 
-        x: 0.5061287879943848
-        y: -0.438145250082016
-        z: 0.6134909987449646
-        w: -0.4189167618751526
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_elbow_flex_link"
-    transform: 
-      translation: 
-        x: -0.1188056230545044
-        y: -0.6700040817260742
-        z: 1.0572422625223796
-      rotation: 
-        x: -0.7824606895446777
-        y: -0.1518833190202713
-        z: 0.14245347678661346
-        w: 0.5868508219718933
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_forearm_roll_link"
-    transform: 
-      translation: 
-        x: -0.1188056230545044
-        y: -0.6700040817260742
-        z: 1.0572422625223796
-      rotation: 
-        x: -0.0431467667222023
-        y: 0.013679035007953644
-        z: 0.2077845185995102
-        w: 0.9771268367767334
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_forearm_link"
-    transform: 
-      translation: 
-        x: -0.1188056230545044
-        y: -0.6700040817260742
-        z: 1.0572422625223796
-      rotation: 
-        x: -0.0431467667222023
-        y: 0.013679035007953644
-        z: 0.2077845185995102
-        w: 0.9771268367767334
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_wrist_flex_link"
-    transform: 
-      translation: 
-        x: 0.17435626983642577
-        y: -0.5400365829467774
-        z: 1.0429054857889812
-      rotation: 
-        x: -0.03486309200525284
-        y: -0.02512652426958084
-        z: 0.20933373272418976
-        w: 0.9768995046615601
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_wrist_roll_link"
-    transform: 
-      translation: 
-        x: 0.17435626983642577
-        y: -0.5400365829467774
-        z: 1.0429054857889812
-      rotation: 
-        x: -0.009912938810884953
-        y: -0.019774358719587326
-        z: 0.20990696549415588
-        w: 0.977471113204956
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_gripper_palm_link"
-    transform: 
-      translation: 
-        x: 0.17435626983642577
-        y: -0.5400365829467774
-        z: 1.0429054857889812
-      rotation: 
-        x: -0.009912938810884953
-        y: -0.019774358719587326
-        z: 0.20990696549415588
-        w: 0.977471113204956
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_gripper_motor_accelerometer_link"
-    transform: 
-      translation: 
-        x: 0.17435626983642577
-        y: -0.5400365829467774
-        z: 1.0429054857889812
-      rotation: 
-        x: -0.009912938810884953
-        y: -0.019774358719587326
-        z: 0.20990696549415588
-        w: 0.977471113204956
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_gripper_l_finger_link"
-    transform: 
-      translation: 
-        x: 0.24032904307047526
-        y: -0.4993291219075521
-        z: 1.0452817878723144
-      rotation: 
-        x: -0.009912938810884953
-        y: -0.019774358719587326
-        z: 0.20990696549415588
-        w: 0.977471113204956
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_gripper_l_finger_tip_link"
-    transform: 
-      translation: 
-        x: 0.3215465545654297
-        y: -0.4572862307230631
-        z: 1.0482966702779135
-      rotation: 
-        x: -0.009912938810884953
-        y: -0.019774358719587326
-        z: 0.20990696549415588
-        w: 0.977471113204956
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_gripper_r_finger_link"
-    transform: 
-      translation: 
-        x: 0.24852832158406576
-        y: -0.517562739054362
-        z: 1.0458354276021322
-      rotation: 
-        x: -0.009912938810884892
-        y: -0.019774358719587312
-        z: 0.20990696549415588
-        w: 0.977471113204956
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "r_gripper_r_finger_tip_link"
-    transform: 
-      translation: 
-        x: 0.3338044802347819
-        y: -0.4845455169677734
-        z: 1.0491243324279786
-      rotation: 
-        x: -0.009912938810884892
-        y: -0.019774358719587312
-        z: 0.20990696549415588
-        w: 0.977471113204956
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_shoulder_pan_link"
-    transform: 
-      translation: 
-        x: -0.05
-        y: 0.18799999554951985
-        z: 0.9556749941507976
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.8319684267044067
-        w: 0.554823100566864
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_shoulder_lift_link"
-    transform: 
-      translation: 
-        x: -0.08843425909678142
-        y: 0.2803190549214681
-        z: 0.9556749941507976
-      rotation: 
-        x: 0.10991279035806656
-        y: -0.07329864799976349
-        z: 0.8246760368347168
-        w: 0.5499599575996399
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_upper_arm_roll_link"
-    transform: 
-      translation: 
-        x: -0.08843425909678142
-        y: 0.2803190549214681
-        z: 0.9556749941507976
-      rotation: 
-        x: 0.435505211353302
-        y: 0.46968886256217957
-        z: 0.6818032264709473
-        w: 0.35337239503860474
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_upper_arm_link"
-    transform: 
-      translation: 
-        x: -0.08843425909678142
-        y: 0.2803190549214681
-        z: 0.9556749941507976
-      rotation: 
-        x: 0.435505211353302
-        y: 0.46968886256217957
-        z: 0.6818032264709473
-        w: 0.35337239503860474
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_elbow_flex_link"
-    transform: 
-      translation: 
-        x: -0.2368047873179118
-        y: 0.636704953511556
-        z: 1.060438025156657
-      rotation: 
-        x: 0.8076232671737671
-        y: -0.07936400175094604
-        z: -0.04759285971522331
-        w: 0.5823925137519836
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_forearm_roll_link"
-    transform: 
-      translation: 
-        x: -0.2368047873179118
-        y: 0.636704953511556
-        z: 1.060438025156657
-      rotation: 
-        x: 0.019404441118240356
-        y: -0.009612951427698135
-        z: -0.09203975647687912
-        w: 0.9955198168754578
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_forearm_link"
-    transform: 
-      translation: 
-        x: -0.2368047873179118
-        y: 0.636704953511556
-        z: 1.060438025156657
-      rotation: 
-        x: 0.019404441118240356
-        y: -0.009612951427698135
-        z: -0.09203975647687912
-        w: 0.9955198168754578
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_wrist_flex_link"
-    transform: 
-      translation: 
-        x: 0.07869729200998941
-        y: 0.577760378519694
-        z: 1.0654352785746257
-      rotation: 
-        x: 0.016009271144866943
-        y: -0.04618750512599945
-        z: -0.09269062429666519
-        w: 0.9944942593574524
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_wrist_roll_link"
-    transform: 
-      translation: 
-        x: 0.07869729200998941
-        y: 0.577760378519694
-        z: 1.0654352785746257
-      rotation: 
-        x: 0.016009271144866943
-        y: -0.04618750512599945
-        z: -0.09269062429666519
-        w: 0.9944942593574524
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_gripper_palm_link"
-    transform: 
-      translation: 
-        x: 0.07869729200998941
-        y: 0.577760378519694
-        z: 1.0654352785746257
-      rotation: 
-        x: 0.016009271144866943
-        y: -0.04618750512599945
-        z: -0.09269062429666519
-        w: 0.9944942593574524
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_gripper_motor_accelerometer_link"
-    transform: 
-      translation: 
-        x: 0.07869729200998941
-        y: 0.577760378519694
-        z: 1.0654352785746257
-      rotation: 
-        x: 0.016009271144866943
-        y: -0.04618750512599945
-        z: -0.09269062429666519
-        w: 0.9944942593574524
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_gripper_l_finger_link"
-    transform: 
-      translation: 
-        x: 0.15578641891479492
-        y: 0.5732905069986979
-        z: 1.0726764640808106
-      rotation: 
-        x: 0.016009271144866943
-        y: -0.04618750512599945
-        z: -0.09269062429666519
-        w: 0.9944942593574524
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_gripper_l_finger_tip_link"
-    transform: 
-      translation: 
-        x: 0.24610182444254558
-        y: 0.5611728032430013
-        z: 1.0809991162618002
-      rotation: 
-        x: 0.016009271144866943
-        y: -0.04618750512599945
-        z: -0.09269062429666519
-        w: 0.9944942593574524
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_gripper_r_finger_link"
-    transform: 
-      translation: 
-        x: 0.1521287759145101
-        y: 0.5536444346110027
-        z: 1.0718683840433756
-      rotation: 
-        x: 0.016009271144867006
-        y: -0.04618750512599946
-        z: -0.09269062429666519
-        w: 0.9944942593574524
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_footprint"
-    child_frame_id: "l_gripper_r_finger_tip_link"
-    transform: 
-      translation: 
-        x: 0.24063366254170734
-        y: 0.5318018913269043
-        z: 1.0797911287943522
-      rotation: 
-        x: 0.016009271144867006
-        y: -0.04618750512599946
-        z: -0.09269062429666519
-        w: 0.9944942593574524
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "r_forearm_cam_frame"
-    child_frame_id: "r_forearm_cam_optical_frame"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "ur5_base_link"
+    child_frame_id: "ur5_base"
     transform: 
       translation: 
         x: 0.0
         y: 0.0
         z: 0.0
       rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "l_forearm_cam_frame"
-    child_frame_id: "l_forearm_cam_optical_frame"
-    transform: 
-      translation: 
         x: 0.0
         y: 0.0
-        z: 0.0
-      rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
+        z: -1.0
+        w: 6.123233995736766e-17
   - 
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "l_gripper_motor_slider_link"
-    child_frame_id: "l_gripper_motor_screw_link"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "ur5_wrist_3_link"
+    child_frame_id: "ur5_tool0"
     transform: 
       translation: 
         x: 0.0
@@ -2579,10 +1517,10 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "r_gripper_motor_slider_link"
-    child_frame_id: "r_gripper_motor_screw_link"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "ur5_ee_link"
+    child_frame_id: "kms_mounting_plate"
     transform: 
       translation: 
         x: 0.0
@@ -2590,58 +1528,22 @@ transforms:
         z: 0.0
       rotation: 
         x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "projector_wg6802418_frame"
-    child_frame_id: "projector_wg6802418_child_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: 0.0
-        y: -0.7071067811865475
+        y: 0.7071067811865475
         z: 0.0
         w: 0.7071067811865476
   - 
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "narrow_stereo_r_stereo_camera_frame"
-    child_frame_id: "narrow_stereo_r_stereo_camera_optical_frame"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "adapter_iso50_kms40_frame_in"
+    child_frame_id: "adapter_iso50_kms40_frame_out"
     transform: 
       translation: 
         x: 0.0
         y: 0.0
-        z: 0.0
-      rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "narrow_stereo_l_stereo_camera_frame"
-    child_frame_id: "narrow_stereo_r_stereo_camera_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: -0.09
-        z: 0.0
+        z: 0.016
       rotation: 
         x: 0.0
         y: 0.0
@@ -2651,33 +1553,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "narrow_stereo_l_stereo_camera_frame"
-    child_frame_id: "narrow_stereo_l_stereo_camera_optical_frame"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "kms40_frame_in"
+    child_frame_id: "kms40_frame_out"
     transform: 
       translation: 
         x: 0.0
         y: 0.0
-        z: 0.0
-      rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "narrow_stereo_link"
-    child_frame_id: "narrow_stereo_l_stereo_camera_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
+        z: 0.027
       rotation: 
         x: 0.0
         y: 0.0
@@ -2687,33 +1571,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "narrow_stereo_link"
-    child_frame_id: "narrow_stereo_optical_frame"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "adapter_kms40_fwk050_frame_in"
+    child_frame_id: "adapter_kms40_fwk050_frame_out"
     transform: 
       translation: 
         x: 0.0
         y: 0.0
-        z: 0.0
-      rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "double_stereo_link"
-    child_frame_id: "narrow_stereo_link"
-    transform: 
-      translation: 
-        x: 0.045
-        y: 0.06
-        z: 0.0501
+        z: 0.01
       rotation: 
         x: 0.0
         y: 0.0
@@ -2723,33 +1589,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "wide_stereo_r_stereo_camera_frame"
-    child_frame_id: "wide_stereo_r_stereo_camera_optical_frame"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "fwk_fwa_050_frame_in"
+    child_frame_id: "fwk_fwa_050_frame_out"
     transform: 
       translation: 
         x: 0.0
         y: 0.0
-        z: 0.0
-      rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "wide_stereo_l_stereo_camera_frame"
-    child_frame_id: "wide_stereo_r_stereo_camera_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: -0.09
-        z: 0.0
+        z: 0.0141
       rotation: 
         x: 0.0
         y: 0.0
@@ -2759,33 +1607,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "wide_stereo_l_stereo_camera_frame"
-    child_frame_id: "wide_stereo_l_stereo_camera_optical_frame"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "adapter_fwa050_wsg50_frame_in"
+    child_frame_id: "adapter_fwa050_wsg50_frame_out"
     transform: 
       translation: 
         x: 0.0
         y: 0.0
-        z: 0.0
-      rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "wide_stereo_link"
-    child_frame_id: "wide_stereo_l_stereo_camera_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
+        z: 0.01
       rotation: 
         x: 0.0
         y: 0.0
@@ -2795,33 +1625,15 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "wide_stereo_link"
-    child_frame_id: "wide_stereo_optical_frame"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "gripper_base_link"
+    child_frame_id: "gripper_tool_frame"
     transform: 
       translation: 
         x: 0.0
         y: 0.0
-        z: 0.0
-      rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "double_stereo_link"
-    child_frame_id: "wide_stereo_link"
-    transform: 
-      translation: 
-        x: 0.045
-        y: 0.03
-        z: 0.0501
+        z: 0.144
       rotation: 
         x: 0.0
         y: 0.0
@@ -2831,378 +1643,18 @@ transforms:
     header: 
       seq: 0
       stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "sensor_mount_link"
-    child_frame_id: "double_stereo_link"
+        secs: 1686172999
+        nsecs: 947657108
+      frame_id: "gripper_base_link"
+    child_frame_id: "camera_link"
     transform: 
       translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
+        x: 0.0013289
+        y: -0.06619
+        z: 0.031583
       rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "high_def_frame"
-    child_frame_id: "high_def_optical_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: -0.5
-        y: 0.4999999999999999
-        z: -0.5
-        w: 0.5000000000000001
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "sensor_mount_link"
-    child_frame_id: "high_def_frame"
-    transform: 
-      translation: 
-        x: 0.046457
-        y: -0.11
-        z: 0.0546
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_link"
-    child_frame_id: "base_laser_link"
-    transform: 
-      translation: 
-        x: 0.275
-        y: 0.0
-        z: 0.252
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "torso_lift_link"
-    child_frame_id: "l_torso_lift_side_plate_link"
-    transform: 
-      translation: 
-        x: 0.0535
-        y: 0.209285
-        z: 0.176625
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "torso_lift_link"
-    child_frame_id: "r_torso_lift_side_plate_link"
-    transform: 
-      translation: 
-        x: 0.0535
-        y: -0.209285
-        z: 0.176625
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "base_link"
-    child_frame_id: "torso_lift_motor_screw_link"
-    transform: 
-      translation: 
-        x: -0.15
-        y: 0.0
-        z: 0.7
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "torso_lift_link"
-    child_frame_id: "imu_link"
-    transform: 
-      translation: 
-        x: -0.02977
-        y: -0.1497
-        z: 0.164
-      rotation: 
-        x: 0.0
-        y: 1.0
-        z: 0.0
-        w: 6.123233995736766e-17
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "head_plate_frame"
-    child_frame_id: "sensor_mount_link"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "head_plate_frame"
-    child_frame_id: "projector_wg6802418_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.11
-        z: 0.0546
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "laser_tilt_mount_link"
-    child_frame_id: "laser_tilt_link"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.03
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "r_gripper_palm_link"
-    child_frame_id: "r_gripper_led_frame"
-    transform: 
-      translation: 
-        x: 0.0513
-        y: 0.0
-        z: 0.0244
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "r_gripper_palm_link"
-    child_frame_id: "r_gripper_tool_frame"
-    transform: 
-      translation: 
-        x: 0.18
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "r_gripper_palm_link"
-    child_frame_id: "r_gripper_motor_slider_link"
-    transform: 
-      translation: 
-        x: 0.16828
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "r_gripper_r_finger_tip_link"
-    child_frame_id: "r_gripper_l_finger_tip_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "l_gripper_palm_link"
-    child_frame_id: "l_gripper_led_frame"
-    transform: 
-      translation: 
-        x: 0.0513
-        y: 0.0
-        z: 0.0244
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "l_gripper_palm_link"
-    child_frame_id: "l_gripper_tool_frame"
-    transform: 
-      translation: 
-        x: 0.18
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "l_gripper_palm_link"
-    child_frame_id: "l_gripper_motor_slider_link"
-    transform: 
-      translation: 
-        x: 0.16828
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "l_gripper_r_finger_tip_link"
-    child_frame_id: "l_gripper_l_finger_tip_frame"
-    transform: 
-      translation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-      rotation: 
-        x: 0.0
-        y: 0.0
-        z: 0.0
-        w: 1.0
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "l_forearm_roll_link"
-    child_frame_id: "l_forearm_cam_frame"
-    transform: 
-      translation: 
-        x: 0.135
-        y: 0.0
-        z: 0.044
-      rotation: 
-        x: -0.6792878295877185
-        y: -0.1963874857876812
-        z: -0.19638748578768117
-        w: 0.6792878295877185
-  - 
-    header: 
-      seq: 0
-      stamp: 
-        secs: 1683912499
-        nsecs: 520116091
-      frame_id: "r_forearm_roll_link"
-    child_frame_id: "r_forearm_cam_frame"
-    transform: 
-      translation: 
-        x: 0.135
-        y: 0.0
-        z: 0.044
-      rotation: 
-        x: 0.6792878295877185
-        y: -0.1963874857876812
-        z: 0.19638748578768117
-        w: 0.6792878295877185
+        x: -0.0013328210488418551
+        y: -0.11535978141411592
+        z: -0.9933161528195238
+        w: 0.00365581289996265
 ---

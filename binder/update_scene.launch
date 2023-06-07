@@ -19,7 +19,7 @@
   <!-- Publish robot pose initiate message -->
   <node pkg="rostopic" 
         type="rostopic"
-        name="reset_pr2" 
+        name="reset_robot" 
         args="pub /tf tf2_msgs/TFMessage --file $(arg config_path)/rviz_config/$(arg launch_file).txt --once" 
    />
 </launch>
