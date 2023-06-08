@@ -51,6 +51,6 @@ RUN /opt/conda/bin/python ${HOME}/repo/binder/compress_textures.py --img_path=${
 RUN npm cache clean --force && pip cache purge && rm -rf ${HOME}/.cache/bower && mamba clean -ya
 RUN jupyter lab workspaces import /home/${NB_USER}/repo/binder/workspace.json
 
-WORKDIR ${HOME}/repo/lectures/
+WORKDIR ${HOME}/repo/
 EXPOSE 8888
 ENTRYPOINT ["/home/jovyan/repo/binder/init.sh"]
