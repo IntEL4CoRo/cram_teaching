@@ -27,10 +27,6 @@ USER ${NB_USER}
 # RUN catkin clean --yes
 RUN catkin build
 
-# Precompile and cache LISP code
-RUN rm -rf ${HOME}/.local/share/jupyter/kernels/common-lisp ${HOME}/.cache/common-lisp
-RUN /usr/bin/sbcl --load ${IAI_WS}/src/cram/jupyter/sbcl-jupyter-kernel-installer.lisp
-RUN xvfb-run /usr/bin/sbcl --dynamic-space-size 4096 --load ${HOME}/work/pre-compile.lisp
 
 # Fix 3d Meshes material files missing issue
 RUN cd ${HOME}/workspace/ros/src/cram/cram_demos/cram_projection_demos/resource/household && \
@@ -44,10 +40,17 @@ ARG REPO_BRANCH=devel
 ADD https://api.github.com/repos/yxzhan/cram_teaching/git/refs/heads/${REPO_BRANCH} version.json
 RUN git clone -b ${REPO_BRANCH} https://github.com/yxzhan/cram_teaching.git repo
 RUN chmod +x ${HOME}/repo/binder/init.sh
-# Compress texture files
+# Compress 3d model texture files
 # COPY --chown=${NB_USER}:users ./compress_textures.py ${HOME}/work
-RUN /opt/conda/bin/python ${HOME}/repo/binder/compress_textures.py --img_path=${IAI_WS}/src/iai_maps/iai_apartment/meshes/ --max_size=512
+# RUN /opt/conda/bin/python ${HOME}/repo/binder/compress_textures.py --img_path=${IAI_WS}/src/iai_maps/iai_apartment/meshes/ --max_size=512
 
+# Precompile and cache LISP code
+RUN rm -rf ${HOME}/.local/share/jupyter/kernels/common-lisp ${HOME}/.cache/common-lisp
+RUN /usr/bin/sbcl --load ${IAI_WS}/src/cram/jupyter/sbcl-jupyter-kernel-installer.lisp
+# COPY --chown=${NB_USER}:users ./pre-compile.lisp ${HOME}/repo/binder
+RUN source ${IAI_WS}/devel/setup.bash && xvfb-run /usr/bin/sbcl --load ${HOME}/repo/binder/pre-compile.lisp
+
+# Clean cache
 RUN npm cache clean --force && pip cache purge && rm -rf ${HOME}/.cache/bower && mamba clean -ya
 RUN jupyter lab workspaces import /home/${NB_USER}/repo/binder/workspace.json
 

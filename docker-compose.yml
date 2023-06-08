@@ -63,3 +63,23 @@ services:
     volumes:
       - ./lectures:/home/lectures
     # entrypoint: ./lectures/init.sh
+
+  cram-jupyterhub:
+    image: "cramteaching:jupyterhub-0.6"
+    stdin_open: true
+    tty: true
+    # user: root
+    # command: jupyter-lab --allow-root --no-browser --NotebookApp.token='' --port 8888 --ip=0.0.0.0
+    command: jupyter-lab --no-browser --NotebookApp.token='' --port 8888 --ip=0.0.0.0
+    working_dir: /home/jovyan/
+    entrypoint: /home/jovyan/repo/binder/init.sh
+    ports:
+      - 8888:8888
+      # - 9090:9090
+    privileged: true
+    # environment:
+    #   - DISPLAY
+    volumes:
+      - ./:/home/jovyan/work
+      # - ./lectures:/home/lectures
+      # - /tmp/.X11-unix:/tmp/.X11-unix:rw
