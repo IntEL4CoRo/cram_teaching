@@ -57,3 +57,5 @@ RUN jupyter lab workspaces import /home/${NB_USER}/repo/binder/workspace.json
 WORKDIR ${HOME}/repo/
 EXPOSE 8888
 ENTRYPOINT ["/home/jovyan/repo/binder/init.sh"]
+
+RUN  cd /home/workspace/ros/ && rm -rf ./build/rvizweb/ && catkin build
