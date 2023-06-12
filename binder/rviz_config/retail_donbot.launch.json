@@ -1,6 +1,7 @@
 {
   "globalOptions": {
     "background": "#222222",
+    "defaultColorMaterial": "random1",
     "colladaLoader": "collada2",
     "fixedFrame": "/iai_kitchen/room_link"
   },
