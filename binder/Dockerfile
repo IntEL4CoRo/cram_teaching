@@ -57,6 +57,8 @@ RUN jupyter lab workspaces import /home/${NB_USER}/repo/binder/workspace.json
 WORKDIR ${HOME}/repo/
 EXPOSE 8888
 ENTRYPOINT ["/home/jovyan/repo/binder/init.sh"]
+
 # Force rvizweb update
+ADD https://api.github.com/repos/yxzhan/rvizweb/git/refs/heads/master /${HOME}/rvizweb.json
 RUN cd /home/workspace/ros/src/rvizweb/ && git pull
 RUN cd /home/workspace/ros/ && catkin build
