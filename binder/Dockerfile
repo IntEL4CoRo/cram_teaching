@@ -16,7 +16,7 @@ RUN rm -rf /home/workspace/ros/src/cram/cram_common/cram_tf && \
 RUN rm -rf ${HOME}/workspace && ln -s /home/workspace ${HOME}/workspace
 WORKDIR ${IAI_WS}
 # Install Rvizweb and PyKDL from source
-RUN git clone https://github.com/yxzhan/rvizweb.git src/rvizweb -b 0.1.2
+RUN git clone https://github.com/yxzhan/rvizweb.git src/rvizweb -b master
 RUN git clone https://github.com/orocos/orocos_kinematics_dynamics.git src/orocos_kinematics_dynamics -b v1.5.1
 RUN cd src/orocos_kinematics_dynamics && git submodule update --init
 # Rebuild ROS workspace
@@ -57,5 +57,3 @@ RUN jupyter lab workspaces import /home/${NB_USER}/repo/binder/workspace.json
 WORKDIR ${HOME}/repo/
 EXPOSE 8888
 ENTRYPOINT ["/home/jovyan/repo/binder/init.sh"]
-
-RUN  cd /home/workspace/ros/ && rm -rf ./build/rvizweb/ && catkin build
