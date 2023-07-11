@@ -54,6 +54,10 @@ RUN source ${IAI_WS}/devel/setup.bash && xvfb-run /usr/bin/sbcl --load ${HOME}/r
 RUN npm cache clean --force && pip cache purge && rm -rf ${HOME}/.cache/bower && mamba clean -ya
 RUN jupyter lab workspaces import /home/${NB_USER}/repo/binder/workspace.json
 
+USER root
+RUN apt install htop
+USER ${NB_USER}
+
 WORKDIR ${HOME}/repo/
 EXPOSE 8888
 ENTRYPOINT ["/home/jovyan/repo/binder/init.sh"]
