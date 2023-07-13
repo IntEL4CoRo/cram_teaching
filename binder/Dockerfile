@@ -28,6 +28,9 @@ USER ${NB_USER}
 # RUN catkin clean --yes
 RUN catkin build
 
+# Install other Python lib
+RUN pip install ipywidgets
+
 # Clean cache
 RUN npm cache clean --force && pip cache purge && rm -rf ${HOME}/.cache/bower && mamba clean -ya
 
