@@ -42,7 +42,7 @@ RUN cd ${HOME}/workspace/ros/src/cram/cram_demos/cram_projection_demos/resource/
 # Overwrite the entrypoint, and it has to end with `exec "$@"`.
 # Do not start the juptyerlab server in the entrypoint script, it should be launched by the jupyterhub.
 WORKDIR /home/${NB_USER}
-ARG REPO_BRANCH=devel
+ARG REPO_BRANCH=researcher
 ADD https://api.github.com/repos/yxzhan/cram_teaching/git/refs/heads/${REPO_BRANCH} version.json
 RUN git clone -b ${REPO_BRANCH} https://github.com/yxzhan/cram_teaching.git repo
 RUN chmod +x ${HOME}/repo/binder/init.sh
