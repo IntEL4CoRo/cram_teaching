@@ -55,6 +55,8 @@ RUN chmod +x ${HOME}/repo/binder/init.sh
 RUN /usr/bin/sbcl --load ${IAI_WS}/src/cram/jupyter/sbcl-jupyter-kernel-installer.lisp
 # Precompile and cache LISP code
 RUN source ${IAI_WS}/devel/setup.bash && xvfb-run /usr/bin/sbcl --load ${HOME}/repo/binder/pre-compile.lisp
+
+RUN pip install jupyter-resource-usage jupyter-offlinenotebook
 RUN jupyter lab workspaces import /home/${NB_USER}/repo/binder/workspace.json
 
 WORKDIR ${HOME}/repo/
