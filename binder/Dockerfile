@@ -12,8 +12,11 @@ RUN rm -rf /home/workspace/ros/src/cram/cram_common/cram_tf && \
     git clone https://github.com/cram2/cram.git -b devel ${HOME}/cram_devel && \
     mv ${HOME}/cram_devel/cram_common/cram_tf /home/workspace/ros/src/cram/cram_common/cram_tf && \
     rm -rf ${HOME}/cram_devel
+
+RUN mv ${HOME}/workspace/ros/src/rvizweb /home/workspace/ros/src/ && \
+    rm -rf ${HOME}/workspace && \
+    ln -s /home/workspace ${HOME}/workspace
 # ===  END ===
-RUN rm -rf ${HOME}/workspace && ln -s /home/workspace ${HOME}/workspace
 WORKDIR ${IAI_WS}
 # Install PyKDL from source
 RUN git clone https://github.com/orocos/orocos_kinematics_dynamics.git src/orocos_kinematics_dynamics -b v1.5.1
@@ -38,7 +41,7 @@ RUN /usr/bin/sbcl --load ${IAI_WS}/src/cram/jupyter/sbcl-jupyter-kernel-installe
 # Overwrite the entrypoint, and it has to end with `exec "$@"`.
 # Do not start the juptyerlab server in the entrypoint script, it should be launched by the jupyterhub.
 WORKDIR /home/${NB_USER}
-COPY --chown=1000:1000 ./ /home/${NB_USER}/repo
+COPY --chown=${NB_USER}:users ./ /home/${NB_USER}/repo
 RUN chmod +x ${HOME}/repo/binder/init.sh
 
 # Precompile and cache LISP code for demo notebooks
