@@ -67,8 +67,8 @@ services:
   cram-jupyterhub:
     image: cramteaching:jupyterhub
     build:
-      context: ./binder/
-      dockerfile: Dockerfile
+      context: ./
+      dockerfile: binder/Dockerfile
     stdin_open: true
     tty: true
     # user: root

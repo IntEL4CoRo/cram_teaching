@@ -5,7 +5,7 @@ source ${HOME}/workspace/ros/devel/setup.bash
 # Kill the environment rosnodes
 nodes=$(rosnode list)
 # Nodes to exclude from killing
-exclude=("rosbridge_websocket" "roswww" "rosapi" "rosout")
+exclude=("rosbridge_websocket" "roswww" "rosapi" "rosout", "ros_board")
 # exclude=("rosbridge_websocket" "tf2_web_republisher" "roswww" "rosapi" "rosout")
 
 # Loop through the nodes and kill the ones not in the exclusion list
