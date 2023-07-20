@@ -1,6 +1,6 @@
 FROM arthurniedz/cram:devel
 
-FROM yxzhan/intel4coro:jupyterhub-ros-base-0.2
+FROM yxzhan/intel4coro:jupyterhub-ros-base-0.3
 
 ARG IAI_WS=/home/workspace/ros
 
@@ -13,7 +13,7 @@ RUN rm -rf /home/workspace/ros/src/cram/cram_common/cram_tf && \
     mv ${HOME}/cram_devel/cram_common/cram_tf /home/workspace/ros/src/cram/cram_common/cram_tf && \
     rm -rf ${HOME}/cram_devel
 
-RUN mv ${HOME}/workspace/ros/src/rvizweb /home/workspace/ros/src/ && \
+RUN mv ${HOME}/workspace/ros/src/rvizweb ${HOME}/workspace/ros/src/rosboard /home/workspace/ros/src/ && \
     rm -rf ${HOME}/workspace && \
     ln -s /home/workspace ${HOME}/workspace
 # ===  END ===

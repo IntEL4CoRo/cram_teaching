@@ -65,12 +65,14 @@ services:
     # entrypoint: ./lectures/init.sh
 
   cram-jupyterhub:
-    image: "cramteaching:jupyterhub-0.6"
+    image: cramteaching:jupyterhub
+    build:
+      context: ./binder/
+      dockerfile: Dockerfile
     stdin_open: true
     tty: true
     # user: root
-    # command: jupyter-lab --allow-root --no-browser --NotebookApp.token='' --port 8888 --ip=0.0.0.0
-    command: jupyter-lab --no-browser --NotebookApp.token='' --port 8888 --ip=0.0.0.0
+    command: jupyter-lab --allow-root --no-browser --NotebookApp.token='' --port 8888 --ip=0.0.0.0
     working_dir: /home/jovyan/
     entrypoint: /home/jovyan/repo/binder/init.sh
     ports:
