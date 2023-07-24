@@ -50,5 +50,3 @@ RUN jupyter lab workspaces import /home/${NB_USER}/repo/binder/workspace.json
 
 WORKDIR ${HOME}/repo/
 ENTRYPOINT ["/home/jovyan/repo/binder/init.sh"]
-
-RUN bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"
