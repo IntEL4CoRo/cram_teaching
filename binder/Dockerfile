@@ -55,5 +55,7 @@ WORKDIR ${REPO_DIR}/
 # Overwrite the entrypoint, and it has to end with `exec "$@"`.
 # Do not start the juptyerlab server in the entrypoint script, it should be launched by the binderhub.
 COPY --chown=${NB_USER}:users binder/entrypoint.sh /
+RUN jupyter lab workspaces import ${ROS_WS}/binder/cram.jupyterlab-workspace
+
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["start-notebook.sh"]
