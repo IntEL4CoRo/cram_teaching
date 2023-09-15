@@ -1,0 +1,18 @@
+version: '3'
+services:  
+  cram-binder:
+    image: cramteaching:binderhub
+    # build:
+    #   context: ../
+    #   dockerfile: ./binder/Dockerfile
+    stdin_open: true
+    tty: true
+    privileged: true
+    # user: root
+    working_dir: /home/jovyan
+    # entrypoint: /home/jovyan/work/binder/entrypoint.sh
+    command: jupyter lab --allow-root --NotebookApp.token='' --no-browser --ip=0.0.0.0
+    ports:
+      - 8888:8888
+    # volumes:
+      # - ../:/home/jovyan/work
