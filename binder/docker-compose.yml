@@ -2,9 +2,9 @@ version: '3'
 services:  
   cram-binder:
     image: cramteaching:binderhub
-    # build:
-    #   context: ../
-    #   dockerfile: ./binder/Dockerfile
+    build:
+      context: ../
+      dockerfile: ./binder/Dockerfile
     stdin_open: true
     tty: true
     privileged: true
@@ -16,3 +16,14 @@ services:
       - 8888:8888
     # volumes:
       # - ../:/home/jovyan/work
+    # environment:
+    #   - NVIDIA_DRIVER_CAPABILITIES=all
+    deploy:
+      resources:
+        limits:
+          memory: 8G
+          cpus: '8'
+          # devices:
+          #   - driver: nvidia
+          #     count: all
+          #     capabilities: [gpu]
