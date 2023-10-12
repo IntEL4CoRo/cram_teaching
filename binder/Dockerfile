@@ -1,52 +1,35 @@
+# docker build -f binder/Dockerfile -t cram_teaching:devel .
 FROM arthurniedz/cram:devel
 
-FROM yxzhan/intel4coro:jupyterhub-ros-base-0.2
+FROM intel4coro/base-notebook:20.04-noetic-full-xpra
 
-ARG IAI_WS=/home/workspace/ros
+ENV REPO_DIR=/home/${NB_USER}/cram_teaching
+ENV IAI_WS=/home/${NB_USER}/workspace/ros
 
 USER ${NB_USER}
-# Replace ROS workspace
-COPY --from=0 --chown=${NB_USER}:users /home/workspace /home/workspace
-# === To be deleted after cram branch merged ===
-RUN rm -rf /home/workspace/ros/src/cram/cram_common/cram_tf && \
-    git clone https://github.com/cram2/cram.git -b devel ${HOME}/cram_devel && \
-    mv ${HOME}/cram_devel/cram_common/cram_tf /home/workspace/ros/src/cram/cram_common/cram_tf && \
-    rm -rf ${HOME}/cram_devel
+# COPY CRAM workspace
+COPY --from=0 --chown=${NB_USER}:users /home/workspace/ros/src/. ${IAI_WS}/src/
+RUN cd ${IAI_WS}/src/jupyter/common-lisp-jupyter && git pull
 
-RUN mv ${HOME}/workspace/ros/src/rvizweb /home/workspace/ros/src/ && \
-    rm -rf ${HOME}/workspace && \
-    ln -s /home/workspace ${HOME}/workspace
-# ===  END ===
 WORKDIR ${IAI_WS}
-# Install PyKDL from source
-RUN git clone https://github.com/orocos/orocos_kinematics_dynamics.git src/orocos_kinematics_dynamics -b v1.5.1
-RUN cd src/orocos_kinematics_dynamics && git submodule update --init
 # Rebuild ROS workspace
 USER root
-RUN apt-get update && rosdep install -y --ignore-src --from-paths ./ -r
+RUN rosdep update && \
+    rosdep install -y --ignore-src --from-paths ./ -r && \
+    rosdep fix-permissions
+
 USER ${NB_USER}
 RUN catkin build
 
-# Clean cache
-RUN npm cache clean --force && pip cache purge && rm -rf ${HOME}/.cache/bower && mamba clean -ya
-
-# Fix 3d Meshes material files missing issue
-RUN cd ${HOME}/workspace/ros/src/cram/cram_demos/cram_projection_demos/resource/household && \
-    sed -i '3d' bowl.obj cup.obj
-
 # Intall CommonLisp kernel.
-RUN /usr/bin/sbcl --load ${IAI_WS}/src/cram/jupyter/sbcl-jupyter-kernel-installer.lisp
+RUN source ${IAI_WS}/devel/setup.bash && \
+    /usr/bin/sbcl --load ${IAI_WS}/src/cram/jupyter/sbcl-jupyter-kernel-installer.lisp && \
+    xvfb-run /usr/bin/sbcl --load ${REPO_DIR}/binder/pre-compile.lisp
 
-# Clone this repository and set it as the working directory
-# Overwrite the entrypoint, and it has to end with `exec "$@"`.
-# Do not start the juptyerlab server in the entrypoint script, it should be launched by the jupyterhub.
-WORKDIR /home/${NB_USER}
-COPY --chown=${NB_USER}:users ./ /home/${NB_USER}/repo
-RUN chmod +x ${HOME}/repo/binder/init.sh
+COPY --chown=${NB_USER}:users ./binder/entrypoint.sh /
+COPY --chown=${NB_USER}:users ./binder/webapps.json ${IAI_WS}/src/rvizweb/webapps/app.json 
+COPY --chown=${NB_USER}:users ./ ${REPO_DIR}
 
-# Precompile and cache LISP code for demo notebooks
-RUN source ${IAI_WS}/devel/setup.bash && xvfb-run /usr/bin/sbcl --load ${HOME}/repo/binder/pre-compile.lisp
-RUN jupyter lab workspaces import /home/${NB_USER}/repo/binder/workspace.json
-
-WORKDIR ${HOME}/repo/
-ENTRYPOINT ["/home/jovyan/repo/binder/init.sh"]
+WORKDIR ${REPO_DIR}
+ENTRYPOINT ["/entrypoint.sh"]
+CMD [ "jupyter", "lab", "--allow-root", "--NotebookApp.token=''", "--no-browser", "--ip=0.0.0.0" ]
