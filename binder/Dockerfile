@@ -1,4 +1,4 @@
-# docker build -f binder/Dockerfile -t cram_teaching:devel .
+# docker build -f binder/Dockerfile -t cram_teaching:legacy .
 FROM arthurniedz/cram:devel
 
 FROM intel4coro/base-notebook:20.04-noetic-full-xpra
@@ -33,3 +33,5 @@ COPY --chown=${NB_USER}:users ./ ${REPO_DIR}
 WORKDIR ${REPO_DIR}
 ENTRYPOINT ["/entrypoint.sh"]
 CMD [ "jupyter", "lab", "--allow-root", "--NotebookApp.token=''", "--no-browser", "--ip=0.0.0.0" ]
+RUN pip install https://raw.githubusercontent.com/yxzhan/jupyterlab-rviz/master/dist/jupyterlab_rviz-0.3.1.tar.gz
+
